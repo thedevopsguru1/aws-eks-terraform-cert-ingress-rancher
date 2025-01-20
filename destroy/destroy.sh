@@ -29,17 +29,17 @@ fi
 # Delete Rancher
 echo "Deleting Rancher..."
 helm uninstall rancher --namespace cattle-system || echo "Rancher not found or already deleted."
-kubectl delete namespace cattle-system --ignore-not-found
+#kubectl delete namespace cattle-system --ignore-not-found
 
 # Delete cert-manager
 echo "Deleting cert-manager..."
 helm uninstall cert-manager --namespace cert-manager || echo "Cert-manager not found or already deleted."
-kubectl delete namespace cert-manager --ignore-not-found
+#kubectl delete namespace cert-manager --ignore-not-found
 
 # Delete nginx ingress controller
 echo "Deleting nginx ingress controller..."
 helm uninstall external --namespace controller || echo "Ingress-nginx not found or already deleted."
-kubectl delete namespace controller --ignore-not-found
+#kubectl delete namespace controller --ignore-not-found
 
 # Delete Let's Encrypt ClusterIssuer
 echo "Deleting Let's Encrypt ClusterIssuer..."
