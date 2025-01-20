@@ -21,7 +21,7 @@ done
 read -p "Are you sure you want to destroy all resources (y/N)? " confirm
 confirm=${confirm:-N}
 
-if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+if [[ "$confirm" != "y" && "$confirm" != "Y" && "$confirm" != "yes" && "$confirm" != "YES"]]; then
   echo "Aborting destruction process."
   exit 0
 fi
